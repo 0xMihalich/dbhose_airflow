@@ -172,8 +172,8 @@ https://github.com/0xMihalich/pgpack_dumper
 └─────────────────────────────────────────────────┘
 
 ┌─────────────┐    1. Метаданные    ┌─────────────┐
-│ PostgreSQL  │ ──────────────────► │ ClickHouse  │
-│             │                     │             │
+│ PostgreSQL  │ ────┐    ┌───────── │ ClickHouse  │
+│             │     ▼    ▼          │             │
 │   Table     │    2. PGCopy Stream │   Table     │
 │             │ ────┐               │             │
 └─────────────┘     │               └─────────────┘
@@ -198,8 +198,8 @@ https://github.com/0xMihalich/pgpack_dumper
 └─────────────────────────────────────────────────┘
 
 ┌─────────────┐    1. Метаданные    ┌─────────────┐
-│ ClickHouse  │ ──────────────────► │ PostgreSQL  │
-│             │                     │             │
+│ ClickHouse  │ ────┐    ┌───────── │ PostgreSQL  │
+│             │     ▼    ▼          │             │
 │   Table     │    2. Native Stream │   Table     │
 │             │ ────┐               │             │
 └─────────────┘     │               └─────────────┘
