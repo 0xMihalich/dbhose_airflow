@@ -1,0 +1,1 @@
+select count(*) as value, case when count(*) = 0 then 'Fail' else 'Pass' end as result from {table}

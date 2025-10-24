@@ -1,0 +1,1 @@
+select count(*) - countDistinct(*) as value, case when value = 0 then 'Pass' else 'Fail' end as result from {table}

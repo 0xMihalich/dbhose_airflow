@@ -1,0 +1,14 @@
+include CHANGELOG.md
+include README.md
+include LICENSE
+
+include dbhose_airflow/LOGO
+include dbhose_airflow/*.py
+include dbhose_airflow/ddl/*.sql
+include dbhose_airflow/dq/clickhouse/*.sql
+include dbhose_airflow/dq/greenplum/*.sql
+include dbhose_airflow/dq/postgres/*.sql
+include dbhose_airflow/move/clickhouse/*.sql
+include dbhose_airflow/dq/greenplum/*.sql
+include dbhose_airflow/dq/postgres/*.sql
+recursive-include dbhose_airflow *.sql

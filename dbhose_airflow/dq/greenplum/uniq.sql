@@ -1,0 +1,2 @@
+with cte(cnt, uniq) as (select (select count(*) from {table}), (select count(*) from (select distinct * from {table}) as uniq))
+select cnt - uniq as value, case when cnt - uniq = 0 then 'Pass' else 'Fail' end as result from cte
