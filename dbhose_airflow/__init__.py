@@ -30,7 +30,8 @@ __all__ = (
     "MoveMethod",
     "dbhose_dumper",
 )
-__version__ = "0.0.0.1"
+__author__ = "0xMihalich"
+__version__ = "0.0.1.0"
 
 
 root_path = dirname(__file__)

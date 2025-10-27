@@ -13,7 +13,7 @@ with open(file="README.md", encoding="utf-8") as f:
 
 setup(
     name="dbhose_airflow",
-    version="0.0.0.1",
+    version="0.0.1.0",
     packages=find_packages(),
     author="0xMihalich",
     author_email="bayanmobile87@gmail.com",
@@ -21,7 +21,7 @@ setup(
         "airflow class for exchanging data between "
         "DBMSs in native binary formats."
     ),
-    url="https://github.com/0xMihalich/dbhose",
+    url="https://github.com/0xMihalich/dbhose_airflow",
     long_description=long_description,
     long_description_content_type="text/markdown",
     zip_safe=False,
