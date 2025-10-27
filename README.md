@@ -129,7 +129,7 @@ def transfer_data():
     
     dbhose.from_dmbs(table="source_table")
 
-with DAG('data_transfer_dag', start_date=datetime(2024, 1, 1)) as dag:
+with DAG('data_transfer_dag', start_date=datetime(2025, 10, 27)) as dag:
     transfer_task = PythonOperator(
         task_id='transfer_data',
         python_callable=transfer_data
