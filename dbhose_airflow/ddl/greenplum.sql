@@ -22,6 +22,35 @@ WITH table_info AS (
     LEFT JOIN pg_am as am ON c.relam = am.oid
     WHERE c.oid = '{table}'::regclass
 ),
+partitions_info AS (
+    SELECT
+        child.relname as table_partition,
+        pg_get_expr(child.relpartbound, child.oid) as partition_constraint
+    FROM pg_inherits
+    JOIN pg_class child ON pg_inherits.inhrelid = child.oid
+    WHERE pg_inherits.inhparent = '{table}'::regclass
+),
+partitions_ddl AS (
+    SELECT 
+        string_agg(
+            'CREATE TABLE IF NOT EXISTS ' || (SELECT schema_name FROM table_info) || '.' ||
+            CASE
+                WHEN (SELECT table_name FROM table_info) ~ '^".*"$' THEN
+                    '"' || regexp_replace(table_partition, '^"|"$', '', 'g') || '_temp"'
+                ELSE
+                    table_partition || '_temp'
+            END || 
+            ' PARTITION OF ' || (SELECT schema_name FROM table_info) || '.' || 
+            CASE
+                WHEN (SELECT table_name FROM table_info) ~ '^".*"$' THEN
+                    '"' || regexp_replace((SELECT table_name FROM table_info), '^"|"$', '', 'g') || '_temp"'
+                ELSE
+                    (SELECT table_name FROM table_info) || '_temp'
+            END || ' ' || partition_constraint || ';',
+            E'\n'
+        ) as ddl
+    FROM partitions_info
+),
 columns_info AS (
     SELECT
         quote_ident(pa.attname) as column_name,
@@ -99,7 +128,7 @@ table_ddl AS (
             ELSE ''
         END ||
         E'\n' || ')' ||
-        CASE WHEN (SELECT partition_by FROM table_info) IS NOT NULL THEN E'\n' || (SELECT partition_by FROM table_info) ELSE '' END ||
+        CASE WHEN (SELECT partition_by FROM table_info) IS NOT NULL THEN E'\nPARTITION BY ' || (SELECT partition_by FROM table_info) ELSE '' END ||
         CASE WHEN (SELECT storage_type FROM table_info) IS NOT NULL THEN E'\n' || 'USING ' || (SELECT storage_type FROM table_info) ELSE '' END ||
         CASE WHEN (SELECT with_options FROM table_info) IS NOT NULL THEN E'\n' || 'WITH (' || array_to_string((SELECT with_options FROM table_info), ', ') || ')' ELSE '' END ||
         E'\n' || (SELECT distribution_clause FROM distribution_info) || ';' as ddl
@@ -154,7 +183,15 @@ temp_table_ddl AS (
             CASE WHEN ci.default_value IS NOT NULL THEN ' DEFAULT ' || ci.default_value ELSE '' END ||
             CASE WHEN ci.not_null THEN ' NOT NULL' ELSE '' END,
             ',' || E'\n' ORDER BY ci.column_order
-        ) || E'\n' || ')' || ';' as ddl
+        ) || E'\n' || ')' ||
+        CASE WHEN (SELECT partition_by FROM table_info) IS NOT NULL THEN 
+            E'\nPARTITION BY ' || (SELECT partition_by FROM table_info)
+        ELSE '' END || ';' ||
+        CASE 
+            WHEN (SELECT ddl FROM partitions_ddl) IS NOT NULL THEN 
+                E'\n' || E'\n' || (SELECT ddl FROM partitions_ddl)
+            ELSE ''
+        END as ddl
     FROM columns_info ci
 ),
 final_original_ddl AS (

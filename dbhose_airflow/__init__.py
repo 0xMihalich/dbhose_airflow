@@ -31,7 +31,7 @@ __all__ = (
     "dbhose_dumper",
 )
 __author__ = "0xMihalich"
-__version__ = "0.0.1.0"
+__version__ = "0.0.2.0"
 
 
 root_path = dirname(__file__)
@@ -349,7 +349,7 @@ class DBHose:
             ))
             is_avaliable, move_query = tuple(*reader.to_rows())
 
-            if not is_avaliable:
+            if not is_avaliable or not move_query:
                 error_msg = (
                     f"Method {self.move_method.name} is not available for "
                     f"{self.table_dest}. Use another method."

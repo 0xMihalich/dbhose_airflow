@@ -63,7 +63,7 @@ DBHose(
 - **`move_method`** (`MoveMethod`) - метод перемещения данных (по умолчанию `MoveMethod.replace`)
 - **`custom_move`** (`str`, optional) - пользовательский SQL запрос для перемещения данных
 - **`compress_method`** (`CompressionMethod`) - метод сжатия для дампов (по умолчанию `CompressionMethod.ZSTD`)
-- **`timeout`** (`int`) - таймаут операций с БД в секундах (по умолчанию `DBMS_DEFAULT_TIMEOUT_SEC`)
+- **`timeout`** (`int`) - таймаут операций с БД в секундах (по умолчанию `DBMS_DEFAULT_TIMEOUT_SEC` = 300)
 
 ## Методы
 
@@ -114,9 +114,14 @@ DBHose(
 ## Пример использования в DAG
 
 ```python
+from datetime import datetime
+
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from datetime import datetime
+from dbhose_airflow import (
+    DBHose,
+    MoveMethod,
+)
 
 def transfer_data():
     # Перенос данных из PostgreSQL в ClickHouse
