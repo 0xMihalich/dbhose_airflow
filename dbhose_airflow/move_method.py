@@ -18,3 +18,4 @@ class MoveMethod(MoveType, Enum):
     custom = MoveType("custom", False, False, True)
     delete = MoveType("delete", True, True, False)
     replace = MoveType("replace", True, False, False)
+    rewrite = MoveType("rewrite", False, False, False)

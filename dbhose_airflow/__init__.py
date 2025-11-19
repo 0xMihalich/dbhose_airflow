@@ -14,6 +14,7 @@ from pandas import DataFrame as PDFrame
 from polars import DataFrame as PLFrame
 
 from .airflow_connect import dbhose_dumper
+from .chunk_query import query_part
 from .dq_check import DQCheck
 from .move_method import MoveMethod
 
@@ -31,7 +32,7 @@ __all__ = (
     "dbhose_dumper",
 )
 __author__ = "0xMihalich"
-__version__ = "0.0.2.0"
+__version__ = "0.0.2.1"
 
 
 root_path = dirname(__file__)
@@ -104,7 +105,7 @@ class DBHose:
         self.connection_dest = connection_dest
         self.connection_src = connection_src
         self.dq_skip_check = dq_skip_check
-        self.filter_by = filter_by
+        self.filter_by = ", ".join(filter_by)
         self.drop_temp_table = drop_temp_table
         self.move_method = move_method
         self.custom_move = custom_move
@@ -333,12 +334,23 @@ class DBHose:
                 self.logger.error(wrap_frame(error_msg))
                 raise ValueError(error_msg)
 
-            self.dumper_dest.cursor.execute(self.custom_move)
+            for query in query_part(self.custom_move):
+                self.dumper_dest.cursor.execute(query)
 
             if self.dumper_dest.__class__ is not NativeDumper:
                 self.dumper_dest.connect.commit()
 
         elif self.move_method.have_sql:
+
+            if (
+                self.move_method is MoveMethod.delete
+                and self.dumper_dest.__class__ is NativeDumper
+                and len(self.filter_by.split(", ")) > 4
+            ):
+                error_msg = "Too many columns in filter_by (> 4)"
+                self.logger.error(wrap_frame(error_msg))
+                raise ValueError(error_msg)
+
             move_query = read_text(
                 mv_path.format(self.dumper_dest.dbname, self.move_method.name)
             )
@@ -357,12 +369,24 @@ class DBHose:
                 self.logger.error(wrap_frame(error_msg))
                 raise ValueError(error_msg)
 
-            self.dumper_dest.cursor.execute(move_query)
+            for query in query_part(move_query):
+                self.dumper_dest.cursor.execute(query)
 
             if self.dumper_dest.__class__ is not NativeDumper:
                 self.dumper_dest.connect.commit()
 
         else:
+            if self.move_method is MoveMethod.rewrite:
+                self.logger.info("Clear table operation start")
+                self.dumper_dest.cursor.execute(
+                    f"truncate table {self.table_dest}"
+                )
+
+                if self.dumper_dest.__class__ is not NativeDumper:
+                    self.dumper_dest.connect.commit()
+
+                self.logger.info("Clear table operation done")
+
             self.dumper_dest.write_between(self.table_dest, self.table_temp)
 
         self.logger.info(wrap_frame(f"Data moved into {self.table_dest}"))
