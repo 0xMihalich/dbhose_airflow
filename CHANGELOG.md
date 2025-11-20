@@ -1,5 +1,10 @@
 # Version History
 
+## 0.0.2.3
+
+* Update depends pgpack-dumper==0.3.3.2
+* Fix write_between diagram for Postgres/Greenplum objects
+
 ## 0.0.2.2
 
 * Fix include_package_data
