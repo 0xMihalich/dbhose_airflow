@@ -1,5 +1,9 @@
 # Version History
 
+## 0.0.2.2
+
+* Fix include_package_data
+
 ## 0.0.2.1
 
 * Add MoveMethod.rewrite for full rewrite table with new data

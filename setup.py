@@ -13,7 +13,7 @@ with open(file="README.md", encoding="utf-8") as f:
 
 setup(
     name="dbhose_airflow",
-    version="0.0.2.1",
+    version="0.0.2.2",
     packages=find_packages(),
     author="0xMihalich",
     author_email="bayanmobile87@gmail.com",
@@ -24,5 +24,6 @@ setup(
     url="https://github.com/0xMihalich/dbhose_airflow",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    include_package_data=True,
     zip_safe=False,
 )
