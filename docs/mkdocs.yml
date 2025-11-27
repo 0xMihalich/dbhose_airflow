@@ -1,0 +1,12 @@
+site_name: My Project
+site_description: Minimal documentation example
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+
+markdown_extensions:
+  - pymdownx.highlight
