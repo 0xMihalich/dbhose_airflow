@@ -1,4 +1,4 @@
-site_name: My Project
+site_name: DBHose Airflow
 site_description: Minimal documentation example
 
 theme:
@@ -6,7 +6,6 @@ theme:
 
 nav:
   - Home: index.md
-  - Installation: installation.md
 
 markdown_extensions:
   - pymdownx.highlight
