@@ -1,5 +1,11 @@
 # Version History
 
+## 0.0.2.4
+
+* Update depends native-dumper==0.3.3.2
+* Update depends pgpack-dumper==0.3.3.3
+* Add gc collect after write destination table
+
 ## 0.0.2.3
 
 * Update depends pgpack-dumper==0.3.3.2

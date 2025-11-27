@@ -1,4 +1,5 @@
 from __future__ import annotations
+from gc import collect
 from os.path import dirname
 from typing import (
     Any,
@@ -32,7 +33,7 @@ __all__ = (
     "dbhose_dumper",
 )
 __author__ = "0xMihalich"
-__version__ = "0.0.2.3"
+__version__ = "0.0.2.4"
 
 
 root_path = dirname(__file__)
@@ -391,6 +392,7 @@ class DBHose:
 
         self.logger.info(wrap_frame(f"Data moved into {self.table_dest}"))
         self.drop_temp()
+        collect()
 
     def from_file(
         self,
