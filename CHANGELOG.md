@@ -3,6 +3,7 @@
 ## 0.0.2.5
 
 * Update depends pgpack-dumper==0.3.3.4
+* Add docs directory to project
 
 ## 0.0.2.4
 
