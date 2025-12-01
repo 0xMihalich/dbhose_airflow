@@ -1,5 +1,12 @@
 # Version History
 
+## 0.0.2.7
+
+* Fix clickhouse replace partition query
+* Improve query_part() function
+* Update depends native-dumper==0.3.3.3
+* Fix LOGO letters
+
 ## 0.0.2.6
 
 * Update depends pgpack-dumper==0.3.3.5
