@@ -1,5 +1,11 @@
 # Version History
 
+## 0.0.2.6
+
+* Update depends pgpack-dumper==0.3.3.5
+* Refactor from_airflow initialization
+* Fix Destination Table diagram
+
 ## 0.0.2.5
 
 * Update depends pgpack-dumper==0.3.3.4

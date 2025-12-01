@@ -41,8 +41,8 @@ class DBHoseObject(NamedTuple):
             "logger": log,
         }
 
-        if self.connection is CHConnector and connection.port == 9000:
-            port = 8123
+        if self.connection is CHConnector:
+            port = 8123 if connection.port == 9000 else connection.port
             params["timeout"] = timeout
         else:
             port = connection.port

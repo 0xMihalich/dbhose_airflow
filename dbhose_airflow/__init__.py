@@ -33,7 +33,7 @@ __all__ = (
     "dbhose_dumper",
 )
 __author__ = "0xMihalich"
-__version__ = "0.0.2.5"
+__version__ = "0.0.2.6"
 
 
 root_path = dirname(__file__)
@@ -150,6 +150,7 @@ class DBHose:
 
         if self.dumper_dest.__class__ is not NativeDumper:
             self.dumper_dest.connect.commit()
+            self.dumper_dest.copy_buffer.query = None
 
         self.logger.info(wrap_frame(f"Table {self.table_temp} created"))
 
@@ -164,6 +165,7 @@ class DBHose:
 
             if self.dumper_dest.__class__ is not NativeDumper:
                 self.dumper_dest.connect.commit()
+                self.dumper_dest.copy_buffer.query = None
 
             self.logger.info(wrap_frame(f"Table {self.table_temp} dropped"))
         else:
@@ -340,6 +342,7 @@ class DBHose:
 
             if self.dumper_dest.__class__ is not NativeDumper:
                 self.dumper_dest.connect.commit()
+                self.dumper_dest.copy_buffer.query = None
 
         elif self.move_method.have_sql:
 
@@ -375,6 +378,7 @@ class DBHose:
 
             if self.dumper_dest.__class__ is not NativeDumper:
                 self.dumper_dest.connect.commit()
+                self.dumper_dest.copy_buffer.query = None
 
         else:
             if self.move_method is MoveMethod.rewrite:
@@ -385,6 +389,7 @@ class DBHose:
 
                 if self.dumper_dest.__class__ is not NativeDumper:
                     self.dumper_dest.connect.commit()
+                    self.dumper_dest.copy_buffer.query = None
 
                 self.logger.info("Clear table operation done")
 
