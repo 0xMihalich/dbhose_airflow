@@ -1,8 +1,13 @@
 # Version History
 
+## 0.0.3.1
+
+* Update depends pgpack-dumper==0.3.4.1
+* Improve invalid byte sequence for encoding "UTF8": 0x00
+
 ## 0.0.3.0
 
-* Update depends pgpack-dumper==0.3.4.0
+* Update depends native-dumper==0.3.4.0
 * Update depends pgpack-dumper==0.3.4.0
 * Add auto convert String/FixedString(36) from Clickhouse data to Postgres uuid
 * Fix docs show logo
