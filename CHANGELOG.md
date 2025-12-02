@@ -1,5 +1,12 @@
 # Version History
 
+## 0.0.3.0
+
+* Update depends pgpack-dumper==0.3.4.0
+* Update depends pgpack-dumper==0.3.4.0
+* Add auto convert String/FixedString(36) from Clickhouse data to Postgres uuid
+* Fix docs show logo
+
 ## 0.0.2.8
 
 * Update depends pgpack-dumper==0.3.3.6
