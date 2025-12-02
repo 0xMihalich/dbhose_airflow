@@ -1,5 +1,9 @@
 # Version History
 
+## 0.0.2.8
+
+* Update depends pgpack-dumper==0.3.3.6
+
 ## 0.0.2.7
 
 * Fix clickhouse replace partition query

@@ -13,7 +13,7 @@ with open(file="README.md", encoding="utf-8") as f:
 
 setup(
     name="dbhose_airflow",
-    version="0.0.2.7",
+    version="0.0.2.8",
     packages=find_packages(),
     author="0xMihalich",
     author_email="bayanmobile87@gmail.com",
