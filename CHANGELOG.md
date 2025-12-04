@@ -1,5 +1,9 @@
 # Version History
 
+## 0.0.3.5
+
+* Update depends native-dumper==0.3.4.4
+
 ## 0.0.3.4
 
 * Update depends native-dumper==0.3.4.3
