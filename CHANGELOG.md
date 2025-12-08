@@ -1,5 +1,11 @@
 # Version History
 
+## 0.0.4.0
+
+* Update depends native-dumper==0.3.4.7
+* Update depends pgpack-dumper==0.3.4.3
+* Update setuptools to latest version
+
 ## 0.0.3.7
 
 * Update depends native-dumper==0.3.4.6
