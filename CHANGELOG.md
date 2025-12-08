@@ -1,5 +1,10 @@
 # Version History
 
+## 0.0.4.2
+
+* Update depends pgpack-dumper==0.3.4.5
+* Fix unpack requires a buffer of 4 bytes for unix systems
+
 ## 0.0.4.1
 
 * Update depends pgpack-dumper==0.3.4.4
