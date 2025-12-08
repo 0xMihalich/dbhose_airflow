@@ -1,5 +1,9 @@
 # Version History
 
+## 0.0.4.3
+
+* Update depends pgpack-dumper==0.3.4.6
+
 ## 0.0.4.2
 
 * Update depends pgpack-dumper==0.3.4.5
