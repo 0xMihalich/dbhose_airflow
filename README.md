@@ -141,7 +141,7 @@ with DAG('data_transfer_dag', start_date=datetime(2025, 10, 27)) as dag:
     )
 ```
 
-## Ограничения альфа-версии
+## Ограничения бета-версии
 
 - Поддерживаются только ClickHouse, Greenplum и PostgreSQL
 - Возможны ошибки при работе с большими объемами данных
