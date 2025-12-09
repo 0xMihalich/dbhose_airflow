@@ -1,5 +1,11 @@
 # Version History
 
+## 0.0.4.4
+
+* Update depends pgpack-dumper==0.3.4.7
+* Fix pgpack array read function on unix systems
+* Fix install on unix systems
+
 ## 0.0.4.3
 
 * Update depends pgpack-dumper==0.3.4.6
