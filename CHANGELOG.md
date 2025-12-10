@@ -1,5 +1,12 @@
 # Version History
 
+## 0.1.0.1
+
+* Update depends native-dumper==0.3.4.9
+* Update depends pgpack-dumper==0.3.4.8
+* Update README.md
+* Change DQ output message for check column sum
+
 ## 0.1.0.0
 
 * Update depends native-dumper==0.3.4.8

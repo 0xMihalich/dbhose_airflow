@@ -33,7 +33,7 @@ __all__ = (
     "dbhose_dumper",
 )
 __author__ = "0xMihalich"
-__version__ = "0.1.0.0"
+__version__ = "0.1.0.1"
 
 
 root_path = dirname(__file__)
@@ -235,22 +235,26 @@ class DBHose:
 
                                 if value_src != value_dst:
                                     err_msg = (
-                                        f"Check {column_src} test Fail: "
-                                        f"value {value_src} <> {value_dst}"
+                                        f"Check column {column_src} test "
+                                        f"Fail: value {value_src} "
+                                        f"<> {value_dst}"
                                     )
                                     self.logger.error(wrap_frame(err_msg))
                                     raise ValueError(err_msg)
 
                                 self.logger.info(
                                     wrap_frame(
-                                        f"Check {column_src} test Pass"
+                                        f"Check column {column_src} "
+                                        "test Pass",
                                     ),
                                 )
                                 break
                         else:
                             self.logger.warning(
-                                wrap_frame(f"Check {column_src} test Skip "
-                                "[no column for test]"),
+                                wrap_frame(
+                                    f"Check column {column_src} test Skip "
+                                    "[no column for test]",
+                                ),
                             )
                 else:
                     reader_src = dumper_src.to_reader(
