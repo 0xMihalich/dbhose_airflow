@@ -21,8 +21,9 @@ DBHose-Airflow
 
    overview/index
    quickstart/index
-   enums/index
+   classes/index
    constants/index
+   enums/index
    functions/index
 
 .. toctree::
