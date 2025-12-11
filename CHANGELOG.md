@@ -1,5 +1,11 @@
 # Version History
 
+## 0.1.0.2
+
+* Add depends dbhose-utils==0.0.2.4
+* Add documentation link
+* Delete OLD_DOCS.md
+
 ## 0.1.0.1
 
 * Update depends native-dumper==0.3.4.9
