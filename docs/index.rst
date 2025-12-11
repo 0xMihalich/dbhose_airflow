@@ -15,3 +15,9 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
+.. toctree::
+    :hidden:
+    :caption: Project Links
+
+    GitHub <https://github.com/0xMihalich/dbhose_airflow>
+    PyPI <https://pypi.org/project/dbhose-airflow/>
