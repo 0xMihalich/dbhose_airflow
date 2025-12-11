@@ -11,6 +11,8 @@ copyright = '2025, 0xMihalich'
 author = '0xMihalich'
 release = '0.1.0.1'
 
+language = 'ru'
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
