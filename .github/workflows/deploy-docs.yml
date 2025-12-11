@@ -1,0 +1,88 @@
+name: Deploy Documentation (ReadTheDocs compatible)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - '.readthedocs.yaml'
+      - 'requirements_doc.txt'
+      - 'pyproject.toml'
+  workflow_dispatch:
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-22.04  # Соответствует .readthedocs.yaml
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Read .readthedocs.yaml configuration
+        id: config
+        run: |
+          echo "📋 ReadTheDocs configuration detected"
+          echo "OS: ubuntu-22.04"
+          echo "Python: 3.10"
+          echo "Sphinx config: docs/conf.py"
+          
+          # Проверяем наличие файлов
+          if [ ! -f requirements_doc.txt ]; then
+            echo "⚠️  Warning: requirements_doc.txt not found"
+          fi
+
+      - name: Install project and documentation
+        run: |
+          # Точная репликация шагов из .readthedocs.yaml
+          echo "1. Installing main package (pip install -e .)..."
+          pip install -e .
+          
+          echo "2. Installing documentation dependencies..."
+          if [ -f requirements_doc.txt ]; then
+            pip install -r requirements_doc.txt
+          else
+            # Минимальные зависимости если файл не найден
+            pip install sphinx sphinx-rtd-theme
+          fi
+
+      - name: Build documentation
+        run: |
+          echo "Building Sphinx documentation from docs/conf.py..."
+          cd docs
+          make clean || true
+          make html || sphinx-build -b html . _build/html
+
+      - name: Prepare for GitHub Pages
+        run: |
+          cd docs/_build/html
+          # Критически важный файл для GitHub Pages
+          touch .nojekyll
+          
+          # Создаем index.html если нужно
+          if [ ! -f index.html ]; then
+            echo "<meta http-equiv='refresh' content='0; url=index.html'>" > index.html
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs/_build/html'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
