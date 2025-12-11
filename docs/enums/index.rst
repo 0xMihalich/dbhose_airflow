@@ -5,3 +5,4 @@
     :maxdepth: 1
 
    move_method
+   dump_type
