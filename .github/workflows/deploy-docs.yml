@@ -1,4 +1,4 @@
-name: Deploy Documentation (ReadTheDocs compatible)
+name: Deploy Documentation
 
 on:
   push:
@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   deploy-docs:
-    runs-on: ubuntu-22.04  # Соответствует .readthedocs.yaml
+    runs-on: ubuntu-22.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -38,14 +38,12 @@ jobs:
           echo "Python: 3.10"
           echo "Sphinx config: docs/conf.py"
           
-          # Проверяем наличие файлов
           if [ ! -f requirements_doc.txt ]; then
             echo "⚠️  Warning: requirements_doc.txt not found"
           fi
 
       - name: Install project and documentation
         run: |
-          # Точная репликация шагов из .readthedocs.yaml
           echo "1. Installing main package (pip install -e .)..."
           pip install -e .
           
@@ -53,7 +51,6 @@ jobs:
           if [ -f requirements_doc.txt ]; then
             pip install -r requirements_doc.txt
           else
-            # Минимальные зависимости если файл не найден
             pip install sphinx sphinx-rtd-theme
           fi
 
@@ -67,10 +64,8 @@ jobs:
       - name: Prepare for GitHub Pages
         run: |
           cd docs/_build/html
-          # Критически важный файл для GitHub Pages
           touch .nojekyll
           
-          # Создаем index.html если нужно
           if [ ! -f index.html ]; then
             echo "<meta http-equiv='refresh' content='0; url=index.html'>" > index.html
           fi
