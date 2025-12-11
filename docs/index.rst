@@ -21,6 +21,7 @@ DBHose-Airflow
 
    overview/index
    quickstart/index
+   enums/index
 
 .. toctree::
    :hidden:
