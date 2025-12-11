@@ -4,6 +4,7 @@
 .. toctree::
     :maxdepth: 1
 
-   move_method
-   dump_type
    compression_method
+   dump_type
+   dq_check
+   move_method
