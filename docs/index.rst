@@ -24,7 +24,7 @@ DBHose-Airflow
 
 .. toctree::
    :hidden:
-   :caption: Линки на проект
+   :caption: Линки на проект:
 
    GitHub <https://github.com/0xMihalich/dbhose_airflow>
    PyPI <https://pypi.org/project/dbhose-airflow/>
