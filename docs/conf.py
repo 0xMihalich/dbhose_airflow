@@ -8,6 +8,7 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 html_show_sphinx = False
 html_show_source = False
+html_logo = '_static/logo.png'
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx_copybutton",
