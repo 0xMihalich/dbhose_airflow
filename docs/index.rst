@@ -8,7 +8,8 @@ DBHose-Airflow
 
 .. raw:: html
    
-   <pre>
+   <div class="ascii-logo">
+   <pre style="font-family: 'Courier New', monospace; font-size: 7px; line-height: 1.0;">
    (  (                                                 )          )\ )     (    ( /(
    )\))(   '   (    (                   )       (     ( /(        (()/(   ( )\   )\())               (
   ((_)()\ )   ))\   )\    (     (      (       ))\    )\())   (    /(_))  )((_) ((_)\    (    (     ))\
@@ -17,6 +18,7 @@ DBHose-Airflow
    \ \/\/ / / -_)  | |  / _|  / _ \ | ' ' |  / -_)   |  _|  / _ \   | |) | | _ \ | __ | / _ \ (_-< / -_)
     \_/\_/  \___|  |_|  \__|  \___/ |_|_|_|  \___|    \__|  \___/   |___/  |___/ |_||_| \___/ /__/ \___|
    </pre>
+   </div>
 
 .. toctree::
    :maxdepth: 2
