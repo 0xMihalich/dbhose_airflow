@@ -4,7 +4,7 @@ DBHose-Airflow
 .. raw:: html
    
    <div class="ascii-logo">
-   <pre style="font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.0;">
+   <pre style="font-family: 'Courier New', monospace; font-size: 12px; line-height: 1.0;">
    (  (                                                 )          )\ )     (    ( /(
    )\))(   '   (    (                   )       (     ( /(        (()/(   ( )\   )\())               (
   ((_)()\ )   ))\   )\    (     (      (       ))\    )\())   (    /(_))  )((_) ((_)\    (    (     ))\
