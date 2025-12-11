@@ -3,21 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-DBHose-Airflow documentation
+Официальная страница документации DBHose-Airflow
 ============================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+Здесь пока ничего нету. Уже работаю над этим.
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Контент:
 
 .. toctree::
     :hidden:
-    :caption: Project Links
+    :caption: Линки на проект
 
     GitHub <https://github.com/0xMihalich/dbhose_airflow>
     PyPI <https://pypi.org/project/dbhose-airflow/>
