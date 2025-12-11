@@ -6,3 +6,4 @@
 
    move_method
    dump_type
+   compression_method

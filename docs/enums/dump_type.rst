@@ -86,40 +86,30 @@ DumpType
       
       **Использование:** Для эффективной передачи и хранения дампов PostgreSQL и Greenplum.
 
-   .. rubric:: Примеры использования
-   
-   .. code-block:: python
-      
-      from dbhose_airflow import DumpType
-      
-      # Выбор формата по умолчанию
-      dump_type = DumpType.PGPACK
-      
-      # Получение информации о формате
-      print(dump_type.name)            # "pgpack"
-      print(dump_type.have_compress)   # True
-      print(dump_type.reader)          # <class 'PGPackReader'>
-      print(dump_type.writer)          # <class 'PGPackWriter'>
-      
-      # Итерация по всем типам
-      for dump_format in DumpType:
-          print(f"{dump_format.name}: compression={dump_format.have_compress}")
-      
-      # Получение по имени
-      pgcopy = DumpType["PGCOPY"]
-      
-      # Использование в DBHoseOperator
-      from dbhose_airflow import DBHoseOperator
-      
-      task = DBHoseOperator(
-          task_id='transfer_data',
-          dump_type=DumpType.PGPACK,  # Используем формат со сжатием
-          # ... другие параметры
-      )
-   
-   .. seealso::
-      
-      - :class:`NativeReader` - Ридер для формата Native
-      - :class:`PGCopyReader` - Ридер для формата PGCOPY
-      - :class:`PGPackReader` - Ридер для формата PGPACK
-      - :ref:`data-transfer-guide` - Руководство по передаче данных
+**Пример использования:**
+
+.. code-block:: python
+    
+    from dbhose_airflow import DumpType
+    
+    # Выбор формата по умолчанию
+    dump_type = DumpType.PGPACK
+    
+    # Получение информации о формате
+    print(dump_type.name)            # "pgpack"
+    print(dump_type.have_compress)   # True
+    print(dump_type.reader)          # <class 'PGPackReader'>
+    print(dump_type.writer)          # <class 'PGPackWriter'>
+    
+    # Итерация по всем типам
+    for dump_format in DumpType:
+        print(f"{dump_format.name}: compression={dump_format.have_compress}")
+    
+    # Получение по имени
+    pgcopy = DumpType["PGCOPY"]
+
+.. seealso::
+    
+    - :class:`NativeReader` - Ридер для формата Native
+    - :class:`PGCopyReader` - Ридер для формата PGCOPY
+    - :class:`PGPackReader` - Ридер для формата PGPACK
