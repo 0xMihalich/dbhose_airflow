@@ -22,9 +22,9 @@ DBHose-Airflow
    overview/index
    quickstart/index
    classes/index
-   constants/index
-   enums/index
    functions/index
+   enums/index
+   constants/index
 
 .. toctree::
    :hidden:
