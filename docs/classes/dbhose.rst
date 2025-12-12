@@ -411,8 +411,8 @@ DBHose
     methods/create_temp
     methods/drop_temp
     methods/dq_check
+    methods/to_table
     methods/from_dmbs
     methods/from_file
     methods/from_frame
     methods/from_iterable
-    methods/to_table
