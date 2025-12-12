@@ -1,5 +1,5 @@
-dbhose_dumper
-=============
+Функция dbhose_dumper
+=====================
 
 .. py:function:: dbhose_dumper(
         airflow_connection,
