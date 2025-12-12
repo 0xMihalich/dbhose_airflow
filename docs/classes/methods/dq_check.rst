@@ -4,13 +4,13 @@ dq_check
 .. py:method:: DBHose.dq_check(table: Optional[str] = None)
 
    Выполняет проверки качества данных (Data Quality) для промежуточной таблицы.
-   
+
    .. contents:: Содержание
       :local:
       :depth: 2
-   
+
    **Описание:**
-   
+
    Метод выполняет комплексную проверку качества данных в промежуточной таблице,
    используя набор предопределенных тестов из :class:`DQCheck`. Проверки могут
    включать сравнение с исходной таблицей или самостоятельную валидацию данных.
@@ -18,32 +18,32 @@ dq_check
    .. warning::
 
       Проверки, требующие сравнения с таблицей-источником работают только для полного копирования таблицы.
-   
+
    **Сигнатура:**
-   
+
    .. code-block:: python
-      
+
       def dq_check(self, table: str | None = None) -> None:
           """Data quality checker."""
-   
+
    **Параметры:**
-   
+
    .. py:parameter:: table
       :type: Optional[str]
       :value: None
-      
+
       Имя исходной таблицы для сравнения. Обязателен для проверок,
       требующих сравнения с источником (``need_source_table=True``).
-      
+
       **Примеры:**
-      
+
       - ``"source_schema.source_table"``
       - ``None`` (только проверки без сравнения)
-   
+
    **Алгоритм выполнения:**
-   
+
    .. mermaid::
-      
+
       flowchart TD
           A[Начало DQ проверок] --> B{Для каждого теста в DQCheck}
           
@@ -92,15 +92,15 @@ dq_check
           
           B --> AD[Все тесты пройдены]
           AD --> AE[Завершение DQ проверок]
-   
+
    **Типы проверок:**
-   
+
    Метод обрабатывает четыре типа проверок:
-   
+
    .. list-table:: Типы проверок DQ
       :widths: 25 25 25 25
       :header-rows: 1
-      
+
       * - Тип
         - ``need_source_table``
         - ``generate_queryes``
@@ -121,53 +121,47 @@ dq_check
         - ❌ Нет
         - ❌ Нет
         - Одна проверка на всю таблицу (например, ``empty``)
-   
+
    **Примеры использования:**
-   
+
    .. code-block:: python
       :caption: Базовый пример - проверка без сравнения
-      
+
       from dbhose_airflow import DBHose, DQCheck
-      
+
       dbhose = DBHose(
           table_dest="public.users",
           connection_dest="postgres_target",
           dq_skip_check=["sum", "total"],  # Пропустить сложные проверки
       )
-      
       dbhose.create_temp()
       # ... загрузка данных ...
-      
       # Проверка качества данных (без сравнения с источником)
       dbhose.dq_check(table=None)
-      
       # Выполняются проверки: empty, uniq, future, infinity, nan
       # Проверки sum и total пропускаются (в dq_skip_check)
-   
+
    .. code-block:: python
       :caption: Пример с полным сравнением таблиц
-      
+
       dbhose = DBHose(
           table_dest="analytics.events",
           connection_dest="clickhouse_analytics",
           connection_src="postgres_events",
           dq_skip_check=[],  # Все проверки
       )
-      
       dbhose.create_temp()
       # ... загрузка данных из source в temp ...
-      
       # Полная проверка с сравнением
       dbhose.dq_check(table="postgres_events.source_events")
-      
       # Выполняются ВСЕ проверки, включая сравнение
-   
+
    **Логирование:**
-   
+
    Метод детально логирует процесс проверок:
-   
+
    .. code-block:: text
-      
+
       INFO:root:╔══════════════════════════════════════════════════════════╗
       INFO:root:║                 Start Data Quality tests                 ║
       INFO:root:╚══════════════════════════════════════════════════════════╝
@@ -183,11 +177,11 @@ dq_check
       INFO:root:╔══════════════════════════════════════════════════════════╗
       INFO:root:║    All Data Quality tests have been completed            ║
       INFO:root:╚══════════════════════════════════════════════════════════╝
-   
+
    **Обработка ошибок:**
-   
+
    Метод выбрасывает исключения при обнаружении проблем:
-   
+
    .. list-table:: Типы ошибок
       :widths: 40 60
       :header-rows: 1
@@ -200,19 +194,19 @@ dq_check
         - Найдены проблемные строки (NaN, будущие даты и т.д.)
       * - Исключения СУБД
         - Ошибки выполнения SQL запросов
-   
+
    **Производительность:**
-   
+
    .. warning::
-      
+
       Некоторые проверки могут быть ресурсоемкими:
       
       - ``sum``: Суммирование всех числовых колонок
       - ``total``: Подсчет всех строк
       - ``uniq``: Проверка уникальности (может использовать временные таблицы)
-      
+
       Для больших таблиц (> 1 млн строк) рекомендуется выполнять проверки в непиковое время
-   
+
    **См. также:**
-   
+
    - :doc:`../../enums/dq_check` - Документация перечисления DQCheck
