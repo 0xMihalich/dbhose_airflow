@@ -19,13 +19,13 @@ from_dbms
 
 **Параметры:**
 
-.. py:attr:: query
+.. py:param:: query
     :type: Optional[str]
 
     SQL запрос для выборки данных из источника. Если не указан,
     загружается вся таблица.
 
-.. py:attr:: table
+.. py:param:: table
     :type: Optional[str]
 
     Имя таблицы-источника. Обязателен, если не указан ``query``.
