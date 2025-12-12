@@ -12,7 +12,7 @@ dbhose_utils
 Импорт модуля
 ^^^^^^^^^^^^^
 
-.. literalinclude:: ./simple_dag.py
+.. literalinclude:: ./import_module.py
    :language: python
 
 .. note::
