@@ -152,5 +152,5 @@ DBHoseDumpParams
 
     - :class:`CHConnector` - Коннектор для ClickHouse
     - :class:`PGConnector` - Коннектор для PostgreSQL/Greenplum
-    - :class:`NativeDumper` - Дампер для ClickHouse формата
-    - :class:`PGPackDumper` - Дампер для PostgreSQL формата
+    - :doc:`../classes/native_dumper/index` - Дампер для ClickHouse
+    - :doc:`../classes/pgpack_dumper/index` - Дампер для PostgreSQL/Greenplum

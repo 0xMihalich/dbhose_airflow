@@ -111,5 +111,5 @@ dbhose_dumper
    - :class:`DBHoseDumpParams` - Перечисление конфигураций дамперов
    - :class:`CompressionMethod` - Методы сжатия данных
    - :data:`DBMS_DEFAULT_TIMEOUT_SEC` - Стандартный таймаут
-   - :class:`NativeDumper` - Дампер для ClickHouse
-   - :class:`PGPackDumper` - Дампер для PostgreSQL/Greenplum
+   - :doc:`../classes/native_dumper/index` - Дампер для ClickHouse
+   - :doc:`../classes/pgpack_dumper/index` - Дампер для PostgreSQL/Greenplum
