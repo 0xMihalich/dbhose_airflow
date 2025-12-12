@@ -1,7 +1,11 @@
 dbhose_dumper
 =============
 
-.. py:function:: dbhose_dumper(airflow_connection, compress_method=CompressionMethod.ZSTD, timeout=DBMS_DEFAULT_TIMEOUT_SEC)
+.. py:function:: dbhose_dumper(
+        airflow_connection,
+        compress_method=CompressionMethod.ZSTD,
+        timeout=DBMS_DEFAULT_TIMEOUT_SEC,
+    )
 
    Создает объект дампера из строки соединения Airflow.
    
