@@ -2,11 +2,22 @@ from_dbms
 =========
 
 .. py:method:: DBHose.from_dbms(
-    query: Optional[str] = None,
-    table: Optional[str] = None,
-)
+       query: Optional[str] = None,
+       table: Optional[str] = None,
+   )
+
+   :param query: SQL запрос для выборки данных из источника.
+   :type query: Optional[str]
+   :param table: Объект таблицы-источника
+   :type table: Optional[str]
 
    Полный цикл загрузки данных из СУБД-источника в целевую СУБД.
+   Для работы необходимо указать как минимум один из параметров
+
+    .. warning::
+
+        Параметр query имеет приоритет над параметром table,
+        поэтому если указано оба параметра будет выбран параметр query.
 
 **Описание:**
 
@@ -16,19 +27,6 @@ from_dbms
 2. Загружает данные из источника (``write_between``)
 3. Проверяет качество данных (``dq_check``)
 4. Переносит в целевую таблицу (``to_table``)
-
-**Параметры:**
-
-.. py:param:: query
-    :type: Optional[str]
-
-    SQL запрос для выборки данных из источника. Если не указан,
-    загружается вся таблица.
-
-.. py:param:: table
-    :type: Optional[str]
-
-    Имя таблицы-источника. Обязателен, если не указан ``query``.
 
 **Пример:**
 

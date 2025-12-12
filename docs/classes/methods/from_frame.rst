@@ -18,12 +18,6 @@ from_frame
 3. Проверяет качество данных (``dq_check``)
 4. Переносит в целевую таблицу (``to_table``)
 
-**Исключения:**
-
-.. py:exception:: TypeError
-
-    Возникает, если переданный объект не является pandas или polars DataFrame.
-
 **Примеры:**
 
 .. code-block:: python
