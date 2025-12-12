@@ -400,7 +400,7 @@ DBHose
       - :class:`DQCheck` - Проверки качества данных
       - :class:`CompressionMethod` - Методы сжатия
       - :data:`DBMS_DEFAULT_TIMEOUT_SEC` - Стандартный таймаут
-      - :func:`/functions/dbhose_dumper` - Создание дамперов из соединений
+      - :doc:`../functions/dbhose_dumper` - Создание дамперов из соединений
 
 Методы класса
 -------------
