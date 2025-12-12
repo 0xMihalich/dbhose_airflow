@@ -147,4 +147,4 @@ dq_check
 
    **См. также:**
 
-   - :doc:`../../enums/dq_check` - Документация перечисления DQCheck
+   - :doc:`../../enums/dq_check` - Объект перечислений DQCheck

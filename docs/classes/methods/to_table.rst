@@ -340,7 +340,7 @@ to_table
 
    **См. также:**
 
-   - :doc:`../../enums/move_method` - Документация перечисления MoveMethod
+   - :doc:`../../enums/move_method` - Объект перечислений MoveMethod
    - :doc:`create_temp` - Создание промежуточной таблицы
    - :doc:`drop_temp` - Удаление промежуточной таблицы
    - :doc:`dq_check` - Проверка качества данных
