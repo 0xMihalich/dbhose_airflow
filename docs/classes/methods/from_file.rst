@@ -16,7 +16,7 @@ from_file
 
 **Параметры:**
 
-.. py:parameter:: fileobj
+.. py:attr:: fileobj
     :type: BufferedReader
 
     Файловый объект в бинарном режиме чтения, содержащий дамп данных.
