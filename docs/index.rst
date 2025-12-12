@@ -21,8 +21,8 @@ DBHose-Airflow
 
    overview/index
    quickstart/index
-   classes/dbhose
-   functions/dbhose_dumper
+   classes/index
+   functions/index
    enums/index
    constants/index
 

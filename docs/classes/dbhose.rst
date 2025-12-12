@@ -1,5 +1,5 @@
-Класс DBHose
-============
+DBHose
+======
 
 .. py:class:: DBHose(
         table_dest,
