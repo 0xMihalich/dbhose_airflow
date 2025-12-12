@@ -409,8 +409,8 @@ DBHose
     :maxdepth: 1
 
     methods/create_temp
-    methods/dq_check
     methods/drop_temp
+    methods/dq_check
     methods/from_dmbs
     methods/from_file
     methods/from_frame
