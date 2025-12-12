@@ -27,9 +27,9 @@ DQCheck
    .. py:attribute:: generate_queryes
       :type: int
       
-      Количество SQL-запросов, которые генерирует проверка.
-      ``0`` - проверка не требует SQL запросов
-      ``1`` - проверка генерирует один SQL запрос
+      Генерирует ли объект SQL-запросы.
+      ``0`` - Нет
+      ``1`` - Да
    
    .. py:attribute:: need_source_table
       :type: int
