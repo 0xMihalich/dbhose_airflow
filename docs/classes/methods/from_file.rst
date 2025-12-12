@@ -4,7 +4,7 @@ from_file
 .. py:method:: DBHose.from_file(fileobj: BufferedReader)
 
    :param fileobj: Файловый объект в бинарном режиме чтения, содержащий дамп данных.
-   Поддерживаются форматы: Native (ClickHouse) и PGPack (PostgreSQL).
+                   Поддерживаются форматы: Native (ClickHouse) и PGPack (PostgreSQL).
    :type fileobj: BufferedReader
 
    Загрузка данных из файла дампа в целевую СУБД.
