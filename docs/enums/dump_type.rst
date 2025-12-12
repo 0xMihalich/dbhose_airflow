@@ -111,5 +111,5 @@ DumpType
 .. seealso::
     
     - :class:`NativeReader` - Ридер для формата Native
-    - :class:`PGCopyReader` - Ридер для формата PGCOPY
-    - :class:`PGPackReader` - Ридер для формата PGPACK
+    - :class:`PGCopyReader` - Ридер для формата PGCopy
+    - :class:`PGPackReader` - Ридер для формата PGPack
