@@ -12,6 +12,7 @@ NativeDumper
    :language: bash
 
 .. toctree::
+   :hidden:
    :caption: Линки на проект:
 
    GitHub <https://github.com/0xMihalich/native_dumper>
