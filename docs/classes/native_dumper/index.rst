@@ -179,3 +179,19 @@ NativeDumper
 **См. также:**
 
 - :class:`CompressionMethod` - Перечисление методов сжатия
+
+Методы класса, доступные пользователю
+-------------------------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    methods/read_dump
+    methods/write_dump
+    methods/write_between
+    methods/to_reader
+    methods/from_rows
+    methods/from_pandas
+    methods/from_polars
+    methods/refresh
+    methods/close
