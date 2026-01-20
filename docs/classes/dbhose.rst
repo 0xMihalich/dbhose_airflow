@@ -12,7 +12,7 @@ DBHose
         custom_move=None,
         compress_method=CompressionMethod.ZSTD,
         timeout=DBMS_DEFAULT_TIMEOUT_SEC,
-    )
+   )
 
    Основной класс DBHose для переноса данных между СУБД.
    
