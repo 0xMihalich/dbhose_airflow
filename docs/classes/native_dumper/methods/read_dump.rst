@@ -24,7 +24,9 @@ read_dump
 Native формат - это бинарный формат ClickHouse, оптимизированный для быстрой передачи данных.
 
 Метод предоставляет два способа выборки данных:
+
 1. Через SQL-запрос (параметр ``query``)
+
 2. Через указание имени таблицы (параметр ``table_name``)
 
 SQL-запрос имеет приоритет, поэтому, в случае передачи обоих параметров, метод проигнорирует указанную таблицу.
@@ -64,7 +66,6 @@ SQL-запрос имеет приоритет, поэтому, в случае 
 
     # Пример 1: Создание дампа с помощью SQL-запроса
     from your_module import NativeDumper, CHConnector
-    import gzip
     
     connector = CHConnector(host="localhost", port=8123)
     dumper = NativeDumper(connector=connector)
@@ -72,35 +73,26 @@ SQL-запрос имеет приоритет, поэтому, в случае 
     # Создание дампа с фильтрацией данных
     with open("users_dump.bin", "wb") as f:
         query = "SELECT id, name, email FROM users WHERE created_at > '2024-01-01'"
-        success = dumper.read_dump(
+        dumper.read_dump(
             fileobj=f,
             query=query
         )
-        if success:
-            print("Данные успешно выгружены")
     
     # Пример 2: Создание дампа всей таблицы
     with open("products_dump.bin", "wb") as f:
-        success = dumper.read_dump(
+        dumper.read_dump(
             fileobj=f,
             table_name="shop.products"  # Полная выборка из таблицы products
         )
     
-    # Пример 3: Создание сжатого дампа
-    with gzip.open("compressed_dump.bin.gz", "wb") as f:
-        success = dumper.read_dump(
-            fileobj=f,
-            table_name="logs.application_logs"
-        )
-    
-    # Пример 4: Инкрементальная выгрузка
+    # Пример 3: Инкрементальная выгрузка
     with open("incremental_dump.bin", "ab") as f:  # Режим добавления
         query = """
             SELECT * FROM events 
             WHERE event_date = today() 
             AND processed = 0
         """
-        success = dumper.read_dump(f, query=query)
+        dumper.read_dump(f, query=query)
 
 **Особенности работы:**
 
@@ -128,10 +120,6 @@ SQL-запрос имеет приоритет, поэтому, в случае 
     try:
         with open("dump.bin", "wb") as f:
             success = dumper.read_dump(f, table_name="my_table")
-            
-            if not success:
-                print("Не удалось создать дамп")
-                # Проверить логи dumper.logger
     except Exception as e:
         print(f"Ошибка: {e}")
         raise e
