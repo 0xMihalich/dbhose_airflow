@@ -1,5 +1,5 @@
 project = "DBHose-Airflow"
-copyright = "2025.10 - %Y.%M, 0xMihalich"
+copyright = "2025.10 - %Y.%m, 0xMihalich"
 author = "0xMihalich"
 release = "0.1.0.3"
 master_doc = "index"
