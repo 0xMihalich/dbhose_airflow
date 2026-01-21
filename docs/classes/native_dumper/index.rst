@@ -176,8 +176,8 @@ NativeDumper
 * Класс автоматически отправляет HELLO-пакет при инициализации для проверки соединения
 * Для больших объемов данных рекомендуется использовать ZSTD сжатие
 
-Методы класса, доступные пользователю
--------------------------------------
+Доступные методы класса и декоратор multiquery
+----------------------------------------------
 
 .. toctree::
     :maxdepth: 1
@@ -191,13 +191,6 @@ NativeDumper
     methods/from_polars
     methods/refresh
     methods/close
-
-Скрытые методы
---------------
-
-.. toctree::
-    :maxdepth: 1
-
     hidden_methods/query_formatter
     hidden_methods/multiquery
 
