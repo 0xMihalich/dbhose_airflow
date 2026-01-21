@@ -65,7 +65,7 @@ SQL-запрос имеет приоритет, поэтому, в случае 
 .. code-block:: python
 
     # Пример 1: Создание дампа с помощью SQL-запроса
-    from your_module import NativeDumper, CHConnector
+    from native_dumper import NativeDumper, CHConnector
     
     connector = CHConnector(host="localhost", port=8123)
     dumper = NativeDumper(connector=connector)
@@ -133,4 +133,5 @@ SQL-запрос имеет приоритет, поэтому, в случае 
 
 **См. также:**
 
+- :doc:`write_dump` - Запись дампа в ClickHouse
 - :class:`CompressionMethod` - Методы сжатия данных
