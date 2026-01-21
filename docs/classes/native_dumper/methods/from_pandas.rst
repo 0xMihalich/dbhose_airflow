@@ -49,7 +49,7 @@ from_pandas
 
     # Пример 1: Базовая загрузка DataFrame
     import pandas as pd
-    from your_module import NativeDumper, CHConnector
+    from native_dumper import NativeDumper, CHConnector
     
     # Создание подключения
     connector = CHConnector(host="localhost", port=8123)
@@ -192,7 +192,7 @@ from_pandas
     # Пример 2: Pandas не установлен
     try:
         # Попытка использовать без pandas
-        from your_module import NativeDumper
+        from native_dumper import NativeDumper
         dumper = NativeDumper(connector)
         # Метод вызовет ошибку при использовании
     except ImportError as e:
