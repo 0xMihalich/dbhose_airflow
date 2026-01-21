@@ -184,28 +184,26 @@ from_rows
 
 Метод автоматически преобразует Python типы в типы ClickHouse:
 
-.. list-table:: Преобразование типов данных
+.. list-table:: Преобразование типов данных (список не полный)
    :widths: 30 30
    :header-rows: 1
 
    * - Python тип
      - ClickHouse тип
    * - ``int``
-     - ``Int32`` / ``Int64``
+     - ``Int32`` / ``Int64`` / ``Int128`` / ``Int256``
    * - ``float``
      - ``Float64``
    * - ``str``
      - ``String``
    * - ``bool``
-     - ``UInt8``
+     - ``Bool``
    * - ``datetime.datetime``
      - ``DateTime``
    * - ``datetime.date``
      - ``Date``
    * - ``list``
      - ``Array``
-   * - ``dict``
-     - ``Map``
 
 **Обработка ошибок:**
 
