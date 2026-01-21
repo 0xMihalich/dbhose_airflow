@@ -66,7 +66,7 @@ from_rows
 
 1. **Список словарей** (рекомендуется):
 
-   .. code-block:: python
+.. code-block:: python
     [
         {"id": 1, "name": "Alice", "age": 25},
         {"id": 2, "name": "Bob", "age": 30},
@@ -74,7 +74,7 @@ from_rows
 
 2. **Список кортежей**:
 
-   .. code-block:: python
+.. code-block:: python
     [
         (1, "Alice", 25),
         (2, "Bob", 30),
@@ -82,7 +82,7 @@ from_rows
 
 3. **Генератор (для больших объемов)**:
 
-   .. code-block:: python
+.. code-block:: python
     def data_generator():
         for i in range(1000000):
             yield {"id": i, "value": i * 2}
