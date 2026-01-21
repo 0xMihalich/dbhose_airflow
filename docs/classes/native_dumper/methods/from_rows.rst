@@ -65,29 +65,27 @@ from_rows
 Поддерживаются следующие форматы:
 
 1. **Список словарей** (рекомендуется):
-   ```python
+
+   .. code-block:: python
     [
         {"id": 1, "name": "Alice", "age": 25},
         {"id": 2, "name": "Bob", "age": 30},
     ]
-   ```
 
 2. **Список кортежей**:
 
-   ```python
+   .. code-block:: python
     [
         (1, "Alice", 25),
         (2, "Bob", 30),
     ]
-   ```
 
 3. **Генератор (для больших объемов)**:
 
-   ```python
+   .. code-block:: python
     def data_generator():
         for i in range(1000000):
             yield {"id": i, "value": i * 2}
-   ```
 
 **Примеры использования:**
 
