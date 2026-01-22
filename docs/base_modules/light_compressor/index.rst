@@ -10,7 +10,7 @@ light_compressor
    PyPI <https://pypi.org/project/light-compressor/>
 
 Установка модуля light-compressor без установки dbhose-airflow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: ./install_module.sh
    :language: bash
