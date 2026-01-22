@@ -219,3 +219,10 @@ Tuple, Map, Variant, AggregateFunction, Geometry типы, Nested, Dynamic, JSON
 
 Использует эффективное columnar представление данных, избегая преобразования столбцов в строки.
 Подходит для быстрой генерации дампов и обмена между серверами ClickHouse.
+
+**Внутренние компоненты**
+
+.. toctree::
+    :maxdepth: 1
+
+    common/index
