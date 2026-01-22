@@ -1,8 +1,6 @@
 defines
 =======
 
-**Константы**
-
 .. toctree::
     :maxdepth: 1
 
