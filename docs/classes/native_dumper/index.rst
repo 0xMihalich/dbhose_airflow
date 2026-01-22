@@ -203,6 +203,13 @@ NativeDumper
 
 **Константы**
 
+.. toctree::
+    :maxdepth: 1
+
+    common/defines/index
+
+**Ошибки**
+
 **См. также:**
 
 - :class:`CompressionMethod` - Перечисление методов сжатия
