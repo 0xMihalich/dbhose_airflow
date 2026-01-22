@@ -25,6 +25,7 @@ DBHose-Airflow
    functions/index
    enums/index
    constants/index
+   base_modules/index
 
 .. toctree::
    :hidden:
