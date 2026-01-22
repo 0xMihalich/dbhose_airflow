@@ -62,3 +62,5 @@ light_compressor
     :maxdepth: 1
 
     auto_detector
+    define_reader
+    define_writer
