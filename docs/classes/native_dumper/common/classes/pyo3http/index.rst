@@ -7,7 +7,14 @@ pyo3http
 
 .. code-block:: python
 
+    # Весь модуль
     from native_dumper.common import pyo3http
+
+    # Сами классы
+    from native_dumper.common.pyo3http import (
+        HttpSession,
+        HttpResponse,
+    )
 
 .. toctree::
     :maxdepth: 1
