@@ -11,6 +11,7 @@ common
     classes/ch_connector
     classes/db_metadata
     classes/dumper_logger
+    classes/pyo3http/index
 
 **Функции**
 
