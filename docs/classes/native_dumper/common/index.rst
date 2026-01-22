@@ -3,6 +3,11 @@ common
 
 **Функции**
 
+.. toctree::
+    :maxdepth: 1
+
+    functions/writer
+
 **Классы**
 
 **Константы**
