@@ -44,6 +44,9 @@ light_compressor
 
 Библиотека оптимизирована для сценариев, где требуется высокая скорость обработки потоков сжатых данных.
 
+
+**Классы**
+
 .. toctree::
     :maxdepth: 1
 
@@ -51,3 +54,11 @@ light_compressor
    decompressors/lz4
    compressors/zstd
    decompressors/zstd
+   compression_method
+
+**Функции**
+
+.. toctree::
+    :maxdepth: 1
+
+    auto_detector
