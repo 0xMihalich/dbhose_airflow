@@ -15,8 +15,9 @@ common
 .. toctree::
     :maxdepth: 1
 
-    functions/writer
     functions/chunk_query
+    functions/writer
+    functions/transfer_diagram
 
 **Константы**
 
