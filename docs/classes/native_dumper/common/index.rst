@@ -3,6 +3,13 @@ common
 
 Дополнительные компоненты для модуля NativeDumper.
 
+**Классы**
+
+.. toctree::
+    :maxdepth: 1
+
+    classes/db_metadata
+
 **Функции**
 
 .. toctree::
@@ -10,8 +17,6 @@ common
 
     functions/writer
     functions/chunk_query
-
-**Классы**
 
 **Константы**
 
