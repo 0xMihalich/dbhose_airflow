@@ -25,4 +25,7 @@ html_static_path = ["_static"]
 html_theme_options = {
     "dark_mode": True,
     "show_source": False,
+    "show_furo_footer": False,
+    'sidebar_width': '350px',
+    'navigation_with_keys': True,
 }
