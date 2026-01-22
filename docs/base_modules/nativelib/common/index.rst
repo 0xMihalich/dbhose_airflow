@@ -9,6 +9,7 @@ common
     :maxdepth: 1
 
     length
+    pandas_astype
 
 **Константы**
 
