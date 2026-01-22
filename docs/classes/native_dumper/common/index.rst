@@ -8,8 +8,9 @@ common
 .. toctree::
     :maxdepth: 1
 
-    classes/db_metadata
     classes/ch_connector
+    classes/db_metadata
+    classes/dumper_logger
 
 **Функции**
 
