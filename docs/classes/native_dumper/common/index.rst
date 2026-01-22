@@ -9,6 +9,7 @@ common
     :maxdepth: 1
 
     classes/db_metadata
+    classes/ch_connector
 
 **Функции**
 
