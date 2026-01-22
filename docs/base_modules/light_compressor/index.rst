@@ -48,4 +48,6 @@ light_compressor
     :maxdepth: 1
 
    compressors/lz4
+   decompressors/lz4
    compressors/zstd
+   decompressors/zstd
