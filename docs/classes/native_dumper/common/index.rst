@@ -13,3 +13,8 @@ common
     defines/index
 
 **Ошибки**
+
+.. toctree::
+    :maxdepth: 1
+
+    errors/index
