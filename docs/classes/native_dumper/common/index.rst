@@ -17,6 +17,7 @@ common
 
     functions/chunk_query
     functions/writer
+    functions/make_columns
     functions/transfer_diagram
 
 **Константы**
