@@ -7,3 +7,11 @@
 * Являются основой проекта.
 * Могут быть установлены отдельно.
 * Не имеют зависимостей, либо минимально зависят от сторонних библиотек.
+
+.. toctree::
+    :maxdepth: 1
+
+   light_compressor/index
+   nativelib/index
+   pgcopy/index
+   pgpack/index
