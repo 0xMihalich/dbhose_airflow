@@ -13,3 +13,4 @@ dtypes
     functions/decimals
     functions/enums
     functions/floats
+    functions/integers
