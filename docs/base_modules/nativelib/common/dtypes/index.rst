@@ -9,3 +9,4 @@ dtypes
     :maxdepth: 1
 
     functions/booleans
+    functions/dates
