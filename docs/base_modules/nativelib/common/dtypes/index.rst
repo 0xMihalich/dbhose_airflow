@@ -14,3 +14,4 @@ dtypes
     functions/enums
     functions/floats
     functions/integers
+    functions/ipaddrs
