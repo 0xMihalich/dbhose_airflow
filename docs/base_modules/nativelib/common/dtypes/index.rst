@@ -1,0 +1,11 @@
+dtypes
+======
+
+Функции и объекты для чтения и записи типов данных Clickhouse. Написаны на языке Cython.
+
+**Функции**
+
+.. toctree::
+    :maxdepth: 1
+
+    functions/booleans
