@@ -11,3 +11,4 @@ dtypes
     functions/booleans
     functions/dates
     functions/decimals
+    functions/enums
