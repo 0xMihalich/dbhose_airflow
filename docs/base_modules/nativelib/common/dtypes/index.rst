@@ -12,3 +12,4 @@ dtypes
     functions/dates
     functions/decimals
     functions/enums
+    functions/floats
