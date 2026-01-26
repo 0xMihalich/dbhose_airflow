@@ -17,6 +17,7 @@ dtypes
     functions/ipaddrs
     functions/strings
     functions/uuids
+    parse
 
 **Классы**
 
