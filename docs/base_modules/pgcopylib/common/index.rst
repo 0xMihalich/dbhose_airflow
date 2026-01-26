@@ -10,6 +10,7 @@ common
 
     dtypes/index
     base
+    enums
     errors
 
 **Классы**
