@@ -11,6 +11,7 @@ dtypes
     functions/dates
     functions/digits
     functions/geometrics
+    functions/ipaddrs
 
 **Классы**
 
