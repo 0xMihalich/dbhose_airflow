@@ -13,6 +13,7 @@ dtypes
     functions/geometrics
     functions/ipaddrs
     functions/jsons
+    functions/strings
 
 **Классы**
 
