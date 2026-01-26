@@ -9,6 +9,7 @@ dtypes
     :maxdepth: 1
 
     functions/dates
+    functions/digits
 
 **Классы**
 
