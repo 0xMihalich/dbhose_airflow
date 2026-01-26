@@ -34,11 +34,19 @@ nativelib
 - Строковые (String, FixedString)
 - Временные (Date, DateTime, Time)
 - Специальные (Enum, Bool, UUID, IPv4/6)
-- Составные (Array, LowCardinality, Nullable).
+- Составные (Array, LowCardinality, Nullable)
 
 **Неподдерживаемые типы (на данный момент):**
 
-Tuple, Map, Variant, AggregateFunction, Geometry типы, Nested, Dynamic, JSON и другие сложные структуры.
+- Tuple
+- Map
+- Variant
+- AggregateFunction
+- Geometry типы
+- Nested
+- Dynamic
+- JSON
+- другие сложные структуры
 
 **Типы данных ClickHouse ↔ Python в виде таблицы:**
 
