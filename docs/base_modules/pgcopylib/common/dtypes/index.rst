@@ -10,6 +10,7 @@ dtypes
 
     functions/dates
     functions/digits
+    functions/geometrics
 
 **Классы**
 
