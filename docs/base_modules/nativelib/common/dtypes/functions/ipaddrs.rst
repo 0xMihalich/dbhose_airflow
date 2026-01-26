@@ -5,7 +5,8 @@ ipaddrs
 
 **Поддерживаемые типы:**
 
-``IPv4Address``, ``IPv6Address``.
+- ``IPv4Address``
+- ``IPv6Address``
 
 **Особенности:**
 

@@ -16,3 +16,4 @@ dtypes
     functions/integers
     functions/ipaddrs
     functions/strings
+    functions/uuids

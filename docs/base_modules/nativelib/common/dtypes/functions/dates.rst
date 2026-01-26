@@ -5,7 +5,12 @@ dates
 
 **Поддерживаемые типы:**
 
-``Date``, ``Date32``, ``DateTime``, ``DateTime64``, ``Time``, ``Time64``.
+- ``Date``
+- ``Date32``
+- ``DateTime``
+- ``DateTime64``
+- ``Time``
+- ``Time64``
 
 read_date
 ---------

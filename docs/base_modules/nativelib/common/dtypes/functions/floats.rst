@@ -5,7 +5,9 @@ floats
 
 **Поддерживаемые типы:**
 
-``BFloat16``, ``Float32``, ``Float64``.
+- ``BFloat16``
+- ``Float32``
+- ``Float64``
 
 read_bfloat16
 -------------
