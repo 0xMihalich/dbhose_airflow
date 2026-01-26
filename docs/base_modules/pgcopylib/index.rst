@@ -45,9 +45,6 @@ pgcopylib
 
 **Типы данных PostgreSQL/Greenplum ↔ Python в виде таблицы:**
 
-Типы данных PostgreSQL/Greenplum ↔ Python
-==========================================
-
 .. list-table:: Поддерживаемые типы данных
    :widths: 30 10 10 50
    :header-rows: 1
