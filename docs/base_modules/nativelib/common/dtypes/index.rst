@@ -15,3 +15,4 @@ dtypes
     functions/floats
     functions/integers
     functions/ipaddrs
+    functions/strings
