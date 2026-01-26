@@ -8,6 +8,7 @@ common
 .. toctree::
     :maxdepth: 1
 
+    errors
     metadata
 
 **Классы**

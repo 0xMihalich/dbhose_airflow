@@ -53,31 +53,12 @@ pgpack
 - ``CompressionMethod.LZ4`` (0x82) - LZ4 сжатие
 - ``CompressionMethod.ZSTD`` (0x90) - ZSTD сжатие (по умолчанию)
 
-**Основные классы:**
-
-* **PGPackReader** - чтение PGPack файлов
-  * Автоматическая распаковка метаданных и данных
-  * Конвертация в Python строки, pandas/polars DataFrame
-  * Потоковое чтение больших файлов
-
-* **PGPackWriter** - запись PGPack файлов
-  * Упаковка метаданных в zlib
-  * Сжатие данных выбранным методом
-  * Запись из различных источников (Python, pandas, polars, байты)
-
 **Зависимости:**
 
 - ``pandas>=2.1.0`` - для работы с DataFrame
 - ``polars>=0.20.31`` - альтернативная обработка данных
 - ``pgcopylib`` - работа с бинарным форматом PostgreSQL COPY
 - ``light_compressor`` - высокоскоростное сжатие LZ4/ZSTD
-
-**Исключения:**
-
-- ``PGPackError`` - базовое исключение
-- ``PGPackHeaderError`` - ошибка сигнатуры заголовка
-- ``PGPackMetadataCrcError`` - ошибка контрольной суммы метаданных
-- ``PGPackModeError`` - ошибка режима файлового объекта
 
 **Использование:**
 
