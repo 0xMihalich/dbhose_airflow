@@ -8,6 +8,7 @@ common
 .. toctree::
     :maxdepth: 1
 
+    dtypes/index
     base
     buffer_object
     errors
