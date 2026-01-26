@@ -10,8 +10,9 @@ common
 
     length
     pandas_astype
-    dtypes/index
+    blocks/index
     columns/index
+    dtypes/index
 
 **Константы**
 

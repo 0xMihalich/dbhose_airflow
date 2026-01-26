@@ -8,5 +8,5 @@ columns
 .. toctree::
     :maxdepth: 1
 
-    column
     column_info
+    column
