@@ -27,3 +27,4 @@ dtypes
     dtype
     objects/array
     objects/dtype
+    objects/lowcardinality
