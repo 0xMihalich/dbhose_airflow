@@ -9,7 +9,7 @@ dbhose_utils
    :caption: Линки на проект:
 
    GitHub <https://github.com/0xMihalich/dbhose_utils>
-   PyPI <https://pypi.org/project/dbhose_utils/>
+   PyPI <https://pypi.org/project/dbhose-utils/>
 
 Установка модуля dbhose_utils без установки dbhose-airflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
