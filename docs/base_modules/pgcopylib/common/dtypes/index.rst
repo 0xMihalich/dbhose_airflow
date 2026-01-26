@@ -12,6 +12,7 @@ dtypes
     functions/digits
     functions/geometrics
     functions/ipaddrs
+    functions/jsons
 
 **Классы**
 
