@@ -3,6 +3,14 @@ common
 
 Внутренние компоненты для модуля pgpack.
 
+**Функции**
+
+.. toctree::
+    :maxdepth: 1
+
+    detect_oid
+    pandas_astype
+
 **Модули**
 
 .. toctree::
