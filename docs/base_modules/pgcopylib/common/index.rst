@@ -9,11 +9,5 @@ common
     :maxdepth: 1
 
     base
+    buffer_object
     errors
-
-**Константы**
-
-.. toctree::
-    :maxdepth: 1
-
-    default_block_size
