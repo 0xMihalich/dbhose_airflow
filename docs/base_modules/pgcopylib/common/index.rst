@@ -10,5 +10,11 @@ common
 
     dtypes/index
     base
-    buffer_object
     errors
+
+**Классы**
+
+.. toctree::
+    :maxdepth: 1
+
+    buffer_object
