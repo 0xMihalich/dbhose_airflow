@@ -8,6 +8,7 @@ dtypes
 .. toctree::
     :maxdepth: 1
 
+    functions/arrays
     functions/dates
     functions/digits
     functions/geometrics
