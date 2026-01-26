@@ -25,3 +25,4 @@ dtypes
     :maxdepth: 1
 
     dtype
+    objects/dtype
