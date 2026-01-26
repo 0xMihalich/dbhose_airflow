@@ -17,3 +17,10 @@ dtypes
     functions/ipaddrs
     functions/strings
     functions/uuids
+
+**Классы**
+
+.. toctree::
+    :maxdepth: 1
+
+    dtype
