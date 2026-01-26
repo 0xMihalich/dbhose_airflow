@@ -37,3 +37,4 @@ dbhose_utils
 
     common
     convertor/index
+    detective
