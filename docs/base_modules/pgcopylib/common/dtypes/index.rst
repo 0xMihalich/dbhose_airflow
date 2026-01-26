@@ -14,6 +14,7 @@ dtypes
     functions/ipaddrs
     functions/jsons
     functions/strings
+    functions/uuids
 
 **Классы**
 
