@@ -22,9 +22,9 @@ DBMetadata
 .. code-block:: python
 
     meta = DBMetadata(
-        name="clickhouse",
-        version="23.8.1.2473",
-        columns=OrderedDict([("id", "Int64"), ("name", "String")])
+        name="postgresql",
+        version="15.0",
+        columns=OrderedDict([("id", "int4"), ("name", "varchar")])
     )
 
 **Использование:**
