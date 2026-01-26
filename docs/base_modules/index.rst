@@ -13,5 +13,5 @@
 
    light_compressor/index
    nativelib/index
-   pgcopy/index
+   pgcopylib/index
    pgpack/index
