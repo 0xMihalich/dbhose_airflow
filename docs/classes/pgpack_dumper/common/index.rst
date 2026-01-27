@@ -22,6 +22,7 @@ common
 
     functions/make_columns
     functions/transfer_diagram
+    functions/read_metadata
 
 **Ошибки**
 

@@ -22,4 +22,11 @@ make_columns
     # Column(name="price", dtype="Decimal", info=DecimalInfo(precision=10, scale=2))
     # → "price": "Decimal(10, 2)"
 
-**Поддерживаемые типы:** FixedString, Decimal, DateTime64, Enum8, Enum16, Time64.
+**Поддерживаемые типы:**
+
+- FixedString
+- Decimal
+- DateTime64
+- Enum8
+- Enum16
+- Time64
