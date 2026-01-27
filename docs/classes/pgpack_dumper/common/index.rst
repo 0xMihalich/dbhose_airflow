@@ -20,9 +20,14 @@ common
 .. toctree::
     :maxdepth: 1
 
+    functions/chunk_query
     functions/make_columns
-    functions/transfer_diagram
+    functions/query_path
+    functions/query_template
+    functions/random_name
     functions/read_metadata
+    functions/search_object
+    functions/transfer_diagram
 
 **Ошибки**
 
