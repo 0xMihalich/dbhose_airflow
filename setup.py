@@ -47,9 +47,9 @@ setup(
     keywords="airflow, database, etl, clickhouse, postgresql, greenplum",
     install_requires=[
         "apache-airflow>=2.4.3",
-        "native-dumper==0.3.4.9",
-        "pgpack-dumper==0.3.4.8",
-        "dbhose-utils==0.0.2.4",
+        "native-dumper==0.3.5.0",
+        "pgpack-dumper==0.3.5.0",
+        "dbhose-utils==0.0.2.5",
     ],
     python_requires=">=3.10",
 )

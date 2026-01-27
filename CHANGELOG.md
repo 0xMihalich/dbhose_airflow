@@ -4,6 +4,9 @@
 
 * Update README.md
 * Update docs directory
+* Update depends native-dumper==0.3.5.0
+* Update depends pgpack-dumper==0.3.5.0
+* Update depends dbhose-utils==0.0.2.5
 
 ## 0.1.0.2
 
