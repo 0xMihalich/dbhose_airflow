@@ -3,7 +3,9 @@ PGPackDumperError
 
 .. py:exception:: PGPackDumperError
 
-   **Родитель:** ``Exception``
+   **Родитель:**
+
+   ``Exception``
 
    Базовое исключение для ошибок PGPackDumper.
 

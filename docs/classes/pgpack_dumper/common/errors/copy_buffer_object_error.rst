@@ -3,7 +3,9 @@ CopyBufferObjectError
 
 .. py:exception:: CopyBufferObjectError
 
-   **Родитель:** ``TypeError``
+   **Родитель:**
+
+   ``TypeError``
 
    Объект назначения не поддерживается для операций чтения/записи.
 

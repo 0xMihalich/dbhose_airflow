@@ -3,7 +3,9 @@ PGPackDumperReadError
 
 .. py:exception:: PGPackDumperReadError
 
-   **Родитель:** ``PGPackDumperError``
+   **Родитель:**
+
+   ``PGPackDumperError``
 
    Ошибка чтения данных в PGPackDumper.
 

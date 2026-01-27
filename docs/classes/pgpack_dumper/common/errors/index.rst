@@ -7,6 +7,7 @@ errors
 .. code-block:: text
 
     Exception
+    ├── CopyBufferError
     ├── TypeError
     │   └── CopyBufferObjectError
     ├── ValueError

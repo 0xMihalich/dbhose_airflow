@@ -3,19 +3,21 @@ ClickhouseServerError
 
 .. py:exception:: ClickhouseServerError
 
-   **Родитель:** ``ValueError``
+   **Родитель:**
+
+   ``ValueError``
 
    Ошибки, возвращаемые сервером ClickHouse.
 
-   **Когда возникает:**
+**Когда возникает:**
 
-   - Некорректный SQL запрос
-   - Ошибки доступа к таблицам
-   - Проблемы с типами данных
-   - Ограничения сервера (память, время выполнения)
+- Некорректный SQL запрос
+- Ошибки доступа к таблицам
+- Проблемы с типами данных
+- Ограничения сервера (память, время выполнения)
 
-   **Примеры:**
+**Примеры:**
 
-   - ``Table does not exist``
-   - ``Syntax error in SQL query``
-   - ``Memory limit exceeded``
+- ``Table does not exist``
+- ``Syntax error in SQL query``
+- ``Memory limit exceeded``

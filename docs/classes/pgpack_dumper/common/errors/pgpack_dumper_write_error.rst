@@ -3,7 +3,9 @@ PGPackDumperWriteError
 
 .. py:exception:: PGPackDumperWriteError
 
-   **Родитель:** ``PGPackDumperError``
+   **Родитель:**
+
+   ``PGPackDumperError``
 
    Ошибка записи данных в PGPackDumper.
 

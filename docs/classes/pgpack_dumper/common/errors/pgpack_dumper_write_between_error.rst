@@ -3,7 +3,9 @@ PGPackDumperWriteBetweenError
 
 .. py:exception:: PGPackDumperWriteBetweenError
 
-   **Родитель:** ``PGPackDumperWriteError``
+   **Родитель:**
+
+   ``PGPackDumperWriteError``
 
    Ошибка переноса данных между источниками в PGPackDumper.
 

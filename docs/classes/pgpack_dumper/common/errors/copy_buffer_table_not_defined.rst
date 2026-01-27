@@ -3,7 +3,9 @@ CopyBufferTableNotDefined
 
 .. py:exception:: CopyBufferTableNotDefined
 
-   **Родитель:** ``ValueError``
+   **Родитель:**
+
+   ``ValueError``
 
    Таблица назначения не определена.
 
