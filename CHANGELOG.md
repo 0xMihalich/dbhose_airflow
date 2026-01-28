@@ -1,5 +1,11 @@
 # Version History
 
+## 0.1.0.4
+
+* Update depends native-dumper==0.3.5.1
+* Update depends pgpack-dumper==0.3.5.1
+* Fix chunk_query function
+
 ## 0.1.0.3
 
 * Update README.md
