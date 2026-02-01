@@ -1,5 +1,12 @@
 # Version History
 
+## 0.1.0.5
+
+* Update depends native-dumper==0.3.5.2
+* Update depends pgpack-dumper==0.3.5.2
+* Update docs directory
+* Improve DQ check column log output info
+
 ## 0.1.0.4
 
 * Update depends native-dumper==0.3.5.1

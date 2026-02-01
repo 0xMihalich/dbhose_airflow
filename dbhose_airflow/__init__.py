@@ -33,7 +33,7 @@ __all__ = (
     "dbhose_dumper",
 )
 __author__ = "0xMihalich"
-__version__ = "0.1.0.4"
+__version__ = "0.1.0.5"
 
 
 root_path = dirname(__file__)
@@ -296,14 +296,16 @@ class DBHose:
 
                         if result == "Fail":
                             err_msg = (
-                                f"Check {column_name} test Fail "
+                                f"Check column {column_name} test Fail "
                                 f"with {value} error rows"
                             )
                             self.logger.error(wrap_frame(err_msg))
                             raise ValueError(err_msg)
 
                         self.logger.info(
-                            wrap_frame(f"Check {column_name} test Pass"),
+                            wrap_frame(
+                                f"Check column {column_name} test Pass",
+                            ),
                         )
                 else:
                     value, result = next(iter(reader_dest.to_rows()))

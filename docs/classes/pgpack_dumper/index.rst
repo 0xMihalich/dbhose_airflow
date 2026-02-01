@@ -86,6 +86,11 @@ PGPackDumper
 
    Логгер для записи событий.
 
+.. py:attribute:: application_name
+   :type: str
+
+   Параметр application_name для передачи в pg_stat_activity.
+
 .. py:attribute:: connect
    :type: Connection
 

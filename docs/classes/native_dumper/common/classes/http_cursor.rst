@@ -1,7 +1,7 @@
 HTTPCursor
 ==========
 
-.. py:class:: HTTPCursor(connector, compression_method, logger, timeout)
+.. py:class:: HTTPCursor(connector, compression_method, logger, timeout, user_agent)
 
    :param connector: Параметры подключения к ClickHouse
    :type connector: CHConnector
@@ -11,6 +11,8 @@ HTTPCursor
    :type logger: Logger
    :param timeout: Таймаут операций в секундах
    :type timeout: int
+   :param user_agent: Имя агента для передачи в system.query_log
+   :type timeout: str | None
 
    Курсор для HTTP взаимодействия с ClickHouse сервером.
 
@@ -42,7 +44,9 @@ HTTPCursor
 * Валидация ошибок сервера ClickHouse
 * Потоковая обработка больших ответов
 
-**Использование:** Как низкоуровневый транспорт для ``NativeDumper``.
+**Использование:**
+
+Как низкоуровневый транспорт для ``NativeDumper``.
 
 **См. также:**
 
