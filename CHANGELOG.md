@@ -1,5 +1,11 @@
 # Version History
 
+## 0.1.0.6
+
+* Update depends native-dumper==0.3.5.3
+* Update depends pgpack-dumper==0.3.5.3
+* Fix error SQLParseError: Maximum number of tokens exceeded (10000)
+
 ## 0.1.0.5
 
 * Update depends native-dumper==0.3.5.2

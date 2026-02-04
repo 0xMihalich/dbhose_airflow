@@ -33,7 +33,7 @@ __all__ = (
     "dbhose_dumper",
 )
 __author__ = "0xMihalich"
-__version__ = "0.1.0.5"
+__version__ = "0.1.0.6"
 
 
 root_path = dirname(__file__)
