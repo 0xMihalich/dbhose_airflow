@@ -9,6 +9,8 @@ read_metadata
    :type query: str | None
    :param table_name: Имя таблицы для получения метаданных
    :type table_name: str | None
+   :param is_readonly: Запущена ли текущая сессия в режиме только чтение. По умолчанию False
+   :type is_readonly: bool
    :return: Метаданные в бинарном формате
    :rtype: bytes
    :raises ValueError: Если не указаны ни query, ни table_name

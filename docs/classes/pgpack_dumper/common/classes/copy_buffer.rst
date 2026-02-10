@@ -14,6 +14,13 @@ CopyBuffer
    :param table_name: Имя таблицы для операций
    :type table_name: str | None
 
+**Атрибуты экземпляра:**
+
+.. py:attribute:: is_readonly
+   :type: bool
+
+   Запущена ли текущая сессия в режиме только чтение. По умолчанию False.
+
 **Описание:**
 
 Класс для управления операциями COPY (чтение/запись) между PostgreSQL/GreenPlum 

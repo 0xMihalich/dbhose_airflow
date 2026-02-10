@@ -122,6 +122,11 @@ PGPackDumper
 
    Имя базы данных.
 
+.. py:attribute:: is_readonly
+   :type: bool
+
+   Запущена ли текущая сессия в режиме только чтение.
+
 .. py:attribute:: _size
    :type: int
    :private:

@@ -1,7 +1,7 @@
 project = "DBHose-Airflow"
 copyright = "2025-%Y, 0xMihalich"
 author = "0xMihalich"
-release = "0.1.0.6"
+release = "0.1.0.7"
 master_doc = "index"
 language = "ru"
 html_theme = "alabaster"

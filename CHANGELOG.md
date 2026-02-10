@@ -1,5 +1,12 @@
 # Version History
 
+## 0.1.0.7
+
+* Fix get metadata text column from postgres/greenplum
+* Fix read metadata from readonly postgres/greenplum transactions
+* Update depends pgpack-dumper==0.3.5.4
+* Update docs directory
+
 ## 0.1.0.6
 
 * Update depends native-dumper==0.3.5.3

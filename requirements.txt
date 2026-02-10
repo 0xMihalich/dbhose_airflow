@@ -1,4 +1,4 @@
 apache-airflow>=2.4.3
 native-dumper==0.3.5.3
-pgpack-dumper==0.3.5.3
+pgpack-dumper==0.3.5.4
 dbhose-utils==0.0.2.5
